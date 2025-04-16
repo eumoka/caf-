@@ -1,0 +1,35 @@
+#include<Servo.h>
+Servo servoMotor;
+int red = 7;
+int green = 4;
+int ye = 8;
+void setup() {
+  servoMotor.attach(5);
+  Serial.begin(9600);
+  pinMode(red, OUTPUT);
+  pinMode(green, OUTPUT);
+  pinMode(ye, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(red,HIGH);
+  servoMotor.write(180);
+  delay(3000);
+  digitalWrite(red,LOW);
+  servoMotor.write(0);
+  delay(3000);
+  
+  digitalWrite(green,HIGH);
+  servoMotor.write(180);
+  delay(3000);
+  digitalWrite(green,LOW);
+  servoMotor.write(0);
+  delay(3000);
+
+  digitalWrite(ye,HIGH);
+  servoMotor.write(180);
+  delay(3000);
+  digitalWrite(ye,LOW);
+  servoMotor.write(0);
+  delay(3000); 
+}
